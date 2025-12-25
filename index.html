@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kiko Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+  font-family:Arial;
+  background:#0f172a;
+  color:white;
+}
+.box{
+  max-width:400px;
+  margin:auto;
+  padding:20px;
+}
+select,input,button{
+  width:100%;
+  padding:10px;
+  margin-top:10px;
+}
+button{
+  background:#38bdf8;
+  border:none;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+<div class="box">
+<h2>💎 Kiko Store</h2>
+
+<select id="game">
+  <option>MLBB</option>
+  <option>Free Fire</option>
+  <option>PUBG</option>
+</select>
+
+<input id="gid" placeholder="Game ID">
+<input id="contact" placeholder="Telegram / Phone">
+
+<button onclick="order()">Order</button>
+
+<p>
+KBZPay: <b>09753103249</b><br>
+Wai Yan Paing Phyo
+</p>
+</div>
+
+<script>
+function order(){
+  let msg =
+  "Kiko Store Order\n\n"+
+  "Game: "+game.value+"\n"+
+  "ID: "+gid.value+"\n"+
+  "Contact: "+contact.value+"\n\n"+
+  "Pay: KBZPay 09753103249 (Wai Yan Paing Phyo)";
+  
+  window.open(
+    "https://t.me/kiko_fav_ma?text="+encodeURIComponent(msg),
+    "_blank"
+  );
+}
+</script>
+
+</body>
+</html>
